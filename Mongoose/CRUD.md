@@ -1,6 +1,10 @@
 ## CRUD operations
 
+We use model methods **inside the relative controller**.
+
 ```js
+// inside user.controller.js
+
 const User = require('./User.model');
 
 // CREATE

@@ -1,6 +1,6 @@
 ## Connect to the database
 
-Create a connection to mongoDB with Mongoose. Inside the models, require this instead of the actual module.
+In the models folder we create a separate file that **only cares about creating a connection** to the mongo database.
 
 ```js
 const mongoose = require('mongoose');
@@ -16,3 +16,5 @@ mongoose.connect(url, settings);
 
 module.exports = mongoose;
 ```
+
+Inside the models we will always use the export from this file, instead of the one coming from the library. This allows us to reference the same connection each time, without the need to create new ones (which would cause a memory leak).
