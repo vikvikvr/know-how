@@ -1,8 +1,10 @@
 # Express Router
 
+It should just be a **map between endpoints and controllers**.
+
 ## Minimal setup
 
-It should just be a map between endpoints and controllers.
+The controllers should be coming from a **separate file**.
 
 ```js
 const { Router } = require('express');
@@ -20,6 +22,8 @@ module.exports = router;
 
 ## Dynamic routes
 
+Allow you to match many **routes that follow a pattern**.
+
 ```js
 // matches /endpoint/1234/banana
 router.get('/endpoint/:id/:name', controllers.get);
@@ -27,5 +31,5 @@ router.get('/endpoint/:id/:name', controllers.get);
 // access params inside controller
 controllers.get = function (req, res) {
   const { id, name } = req.params;
-}
+};
 ```
