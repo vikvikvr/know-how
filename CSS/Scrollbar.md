@@ -1,4 +1,10 @@
-horizontal scrollbar
+# Styling scrollbars
+
+The **default scrollbar** is kinda ugly (at least on windows). We can customize it with the `::-wekbit-scrollbar` family of selectors.
+
+## Horizontal scrollbar
+
+For instance with a scrolling **gallery of pictures**.
 
 ```scss
 .container {

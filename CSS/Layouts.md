@@ -1,6 +1,6 @@
 # Layouts
 
-When working with layouts it's very helpful to see the borders of everything
+When working with layouts it's very helpful to **see the borders** of everything
 
 ```css
 div,
@@ -14,7 +14,7 @@ Different selectors can be added as needed (h1, p, span, a, ul, li).
 
 ## Page layout
 
-The body for a landing page is pretty standard: it contains a top navigation and a footer with stacked sections in between.
+The body for a **landing page** is pretty standard: it contains a top navigation and a footer with stacked sections in between.
 
 ```html
 <body>
@@ -29,7 +29,7 @@ The body for a landing page is pretty standard: it contains a top navigation and
 </body>
 ```
 
-The page has usually 2 big paddings on each side, so the content looks kinda centered nad there is some white space to work with:
+The page has usually **2 big paddings on each side**, so the content looks kinda centered and there is some white space to work with:
 
 ```css
 nav {
@@ -47,7 +47,7 @@ Notice how the actual elements still have their borders at the edges of the scre
 
 ## Navbar layout
 
-Again, pretty standard: we usually want a logo placed on the left side, followed by some text or links on its right
+Again, pretty standard: we usually want a logo placed on the left side, followed by two groups (text/links) with space between them.
 
 `|--LOGO---link1-link2--------------link4-link5-link6--|`
 
@@ -77,7 +77,7 @@ nav {
 }
 ```
 
-We use .SCSS to leverage rules nesting.
+We use .SCSS to leverage **rules nesting**.
 
 ## Hero layout
 
@@ -85,7 +85,7 @@ This can vary a lot, sometimes it's 1 centered content, other times is a 2-colum
 
 ## Features layout
 
-It's usually a multiple-columns layout: each one has an optional icon/image, a title and a brief description.
+It's usually a **multiple-columns** layout: each one has an optional icon/image, a title and a brief description.
 
 `--ICON1-----ICON2-----ICON3--`
 `--TITLE-----TITLE-----TITLE--`

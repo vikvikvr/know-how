@@ -1,6 +1,8 @@
 # Typography
 
-As a good practice, you would want to set `font-size` only once at the top level, and then refer to it using the `em` unit. This allow to change mind later very easily, without having to go through all your styles to make changes.
+As a good practice, you would want to **set** `font-size` **only once** at the top level, and then refer to it using the `em` unit.
+
+This allows us to change mind later very easily, without having to go through all your styles to make changes.
 
 ```css
 body {
@@ -17,7 +19,7 @@ body {
 
 ## Fix packed text
 
-When dealing with long paragraphs, the lines might come as too close to each others. Adding some space between them will make those text-walls more plasing to the eye.
+When dealing with **long paragraphs**, the lines might come as too close to each others. Adding some space between them will make those text-walls more plasing to the eye.
 
 ```css
 .feature-description {
