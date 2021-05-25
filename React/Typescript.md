@@ -21,6 +21,6 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "build"
-  },
+  }
 }
 ```
