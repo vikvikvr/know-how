@@ -5,4 +5,5 @@
 3. [Clicks](https://github.com/vikvikvr/know-how/blob/master/React/Clicks.md)
 4. [Forms](https://github.com/vikvikvr/know-how/blob/master/React/Forms.md)
 5. [Async](https://github.com/vikvikvr/know-how/blob/master/React/Async.md)
-6. [Typescript](https://github.com/vikvikvr/know-how/blob/master/React/Typescript.md)
+6. [Lifecycle hooks](https://github.com/vikvikvr/know-how/blob/master/React/Lifecycle.md)
+7. [Typescript](https://github.com/vikvikvr/know-how/blob/master/React/Typescript.md)
