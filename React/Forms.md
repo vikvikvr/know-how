@@ -2,14 +2,21 @@
 
 ## Control an input field
 
-You want to bind the value of the input to the state, and change the state itself when the input fires an onChange event.
+You want to **bind** the value of the input **to the state**, and change the state itself when the input fires an `onChange` event.
 
-<p class="codepen" data-height="298" data-theme-id="light" data-default-tab="js,result" data-user="vikvikvr" data-slug-hash="YzZQJZZ" style="height: 298px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="React input">
-  <span>See the Pen <a href="https://codepen.io/vikvikvr/pen/YzZQJZZ">
-  React input</a> by vikvikvr (<a href="https://codepen.io/vikvikvr">@vikvikvr</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+Check out the [interactive example](https://codepen.io/vikvikvr/pen/YzZQJZZ) 👈
+
+```js
+const Form = () => {
+  const [name, setName] = useState('');
+
+  const handleChange = (event) => {
+    setName(event.target.value);
+  };
+
+  return <input value={name} onChange={handleChange} type="text" />;
+};
+```
 
 ## Control multiple input fields
 
