@@ -1,9 +1,15 @@
 # Know-how
 
 <div>
-  <img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg"/>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
-  <img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg"/>
+  <a href="https://en.wikipedia.org/wiki/Markdown">
+    <img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg"/>
+  </a>
+  <a href="https://github.com/vikvikvr/know-how/fork">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+  </a>
+  <a href="https://saythanks.io/to/ricchiuto.viktor%40gmail.com">
+    <img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg"/>
+  </a>
 </div>
 
 📚 A collection of software recipes, tips & tricks, best practices and much more! Use it as a **reference** while learning new technologies, or just have a look while reviewing complex topics.
