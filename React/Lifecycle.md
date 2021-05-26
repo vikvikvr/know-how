@@ -24,7 +24,7 @@ const Component = (props) => {
 };
 ```
 
-We might want to execute some actions only when a specific part of the state changes.
+We might want to execute some actions only **when a specific 🔍 part of the state changes**.
 
 ```js
 const Component = (props) => {

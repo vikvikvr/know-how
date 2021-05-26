@@ -2,7 +2,8 @@
 
 ## Control an input field
 
-You want to **bind** the value of the input **to the state**, and change the state itself when the input fires an `onChange` event.
+1. **Bind** 🔗 the value of the input **to the state**
+2. **Change the state** itself when the input fires an **onChange** 👂 event.
 
 Check out the [interactive example](https://codepen.io/vikvikvr/pen/YzZQJZZ) 👈
 
@@ -31,12 +32,8 @@ const BigForm = () => {
   });
 
   const handleChange = (event) => {
-    // grab name and value of the input that has changed
     const { name, value } = event.target;
-    // build a piece of the updated form
-    // object with a dynamic key
     const stateChange = { [name]: value };
-    // merge the change with the current form data
     setForm({ ...form, ...stateChange });
   };
 

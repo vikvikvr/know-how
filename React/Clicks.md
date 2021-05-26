@@ -2,14 +2,15 @@
 
 ## Within the component itself
 
+Create a **handler function** and bind it to the `onClick` 🖱 property in the template.
+
 ```js
-const MovieItem = ({ title }) => {
-  // It's a closure, relies on the "title" prop
+const Component = () => {
   const handleClick = () => {
-    console.log('clicked movie', title);
+    console.log('button was clicked');
   };
 
-  return <div onClick={handleClick}>Title: {title}</div>;
+  return <button onClick={handleClick} />;
 };
 ```
 
