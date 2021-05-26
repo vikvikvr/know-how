@@ -12,6 +12,11 @@ Just apply these styles at the **top level** of your app, to make sure selectors
   margin: 0;
   padding: 0;
 }
+body {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
 ```
 
 This is a very rough an minimalistic approach, should be avoided in production.
