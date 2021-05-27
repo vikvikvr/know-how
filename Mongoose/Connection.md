@@ -1,18 +1,16 @@
 ## Connect to the database
 
-In the models folder we create a separate file that **only cares about creating a connection** to the mongo database.
+In the models folder we create a separate file that **only cares about creating a connection** to the mongo database 🍃.
 
 ```js
 const mongoose = require('mongoose');
 
 const url = 'mongodb://localhost:27017/playground';
 
-const settings = {
+mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
-};
-
-mongoose.connect(url, settings);
+});
 
 module.exports = mongoose;
 ```

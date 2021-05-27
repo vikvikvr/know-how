@@ -19,3 +19,18 @@ const User = mongoose.model('User', userSchema);
 
 module.exports = User;
 ```
+
+---
+
+💡 With **typescript**, just add an **interface**
+
+```ts
+interface IUser {
+  name: string;
+  age: number;
+}
+
+new mongoose.Schema<IUser>({...});
+
+mongoose.model<IUser>(...);
+```
