@@ -34,3 +34,19 @@ controllers.get = async function (req, res) {
   }
 };
 ```
+
+---
+
+💡 With **typescript**, install types
+
+`npm i -D @types/express`
+
+and then type your controller's parameters
+
+```ts
+import { Request, Response } from 'express';
+
+type Controller = (req: Request, res: Response) => void;
+
+const someController: Controller = (req, res) => {};
+```
