@@ -29,3 +29,17 @@ Download a **ready-to-use reset stylesheet**, there are tons out there:
 - [html5 doctor](http://html5doctor.com/html-5-reset-stylesheet/)
 
 Don't forget to include the link:css tag in your template.
+
+## Reset input style
+
+```css
+input {
+  border-style: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 100%;
+}
+```
