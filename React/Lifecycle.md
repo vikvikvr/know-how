@@ -43,7 +43,7 @@ const Component = (props) => {
 
 ## Component will unmount
 
-1️⃣ Executes **only once** when the component is removed from the app. You return a function from useEffect. That function will be executed during **tear-down**.
+1️⃣ Executes **only once** when the component is removed from the app. The **function you return from useEffect** will be executed during **tear-down**.
 
 ```js
 const Component = (props) => {

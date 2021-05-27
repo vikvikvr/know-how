@@ -22,3 +22,21 @@ const App = () => {
   return <div>Found {movies.length} movies</div>;
 };
 ```
+
+## Using the fetch API
+
+After calling fetch, **check the status** to see if there was an **error**. 🚫 After that, **get the response body** with the method `.json()`.
+
+```js
+const getSlowData = async () => {
+  try {
+    const response = await fetch('api-url');
+    if (response.status <= 400) {
+      throw new Error(response);
+    }
+    return response.json();
+  } catch (error) {
+    throw new Error(`failed to get data: ${error.message}`);
+  }
+};
+```

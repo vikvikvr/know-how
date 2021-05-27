@@ -13,21 +13,3 @@ const App = () => {
   return <button onClick={handleClick}>{counter}</button>;
 };
 ```
-
-## 🤷‍♂️ How setState kinda works
-
-Given a **proposed stateChange**, it will check if the result of merging the change with the current state will result in a different overall state. If so, it will trigger a new render.
-
-```js
-class React.Component {
-
-  setState(stateChange) {
-    const newState = merge(stateChange, this.state);
-
-    if (!deepEqual(newState, this.state)) {
-      this.state = newState;
-      this.render();
-    }
-  }
-}
-```
