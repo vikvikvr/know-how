@@ -30,3 +30,21 @@ const Component = (props) => {
 ```
 
 Read the **docs** [here](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react). 👈
+
+## CSS modules
+
+Turning a stylesheet into a module makes it scoped to the component itself. Using the same class names won't collide with other stylesheets because React will prefix them with the name of the component.
+
+Inside the component itself, we can now access the class names
+
+```js
+import styles from './Button.module.scss';
+
+const Button = (props) => {
+  return <button className={styles.btn}>click me</button>;
+};
+```
+
+This helps making sure you use the correct class names, and get notified when they change.
+
+Cool explanation [here](https://blog.bitsrc.io/how-to-use-sass-and-css-modules-with-create-react-app-83fa8b805e5e)
