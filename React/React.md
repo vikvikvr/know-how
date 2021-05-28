@@ -48,3 +48,9 @@ const Button = (props) => {
 This helps making sure you use the correct class names, and get notified when they change.
 
 Cool explanation [here](https://blog.bitsrc.io/how-to-use-sass-and-css-modules-with-create-react-app-83fa8b805e5e)
+
+## Adding GSAP animations
+
+[Guide](https://greensock.com/react/)
+
+We can now use hooks!
