@@ -47,10 +47,74 @@ const Button = (props) => {
 
 This helps making sure you use the correct class names, and get notified when they change.
 
-Cool explanation [here](https://blog.bitsrc.io/how-to-use-sass-and-css-modules-with-create-react-app-83fa8b805e5e)
+Cool explanation [here](https://blog.bitsrc.io/how-to-use-sass-and-css-modules-with-create-react-app-83fa8b805e5e).
 
 ## Adding GSAP animations
 
 [Guide](https://greensock.com/react/)
 
 We can now use hooks!
+
+## Animate route changes
+
+http://reactcommunity.org/react-transition-group/with-react-router/
+
+## Components from svg files
+
+You can turn any .svg file to a React component very easily
+
+```jsx
+import React from 'react';
+import { ReactComponent as Logo } from './logo.svg';
+
+const Icon = () => {
+  return (
+    <div className="icon-container">
+      <Logo />
+    </div>
+  );
+};
+
+// ⚠ Only works with create-react-app
+```
+
+**Styling** its container will affect also the graphic itself
+
+```css
+.icon-container {
+  width: 100px;
+  height: 100px;
+  fill: white;
+}
+```
+
+## Conditional classes
+
+When adding **multiple classes** to an element **conditionally**, we need to use if statements or ternary operators. It might get out of hand really quick, also having to keep track of the needed **white space** prefixes.
+
+```js
+// 1. boring 😴
+
+let btnClasses = 'btn';
+
+if (isPressed) btnClasses += ' btn-pressed';
+else if (isHovered) btnClasses += ' btn-over';
+
+return <button className={btnClasses}>click me</button>;
+```
+
+Using the package [classnames](https://www.npmjs.com/package/classnames), the code becomes much more readable and maintainable.
+
+```js
+// 2. like a boss 🤙
+
+import classNames from 'classnames';
+
+const btnClasses = classNames({
+  btn: true,
+  'btn-pressed': isPressed,
+  'btn-over': !isPressed && isHovered
+});
+
+return <button className={btnClass}>click me</button>;
+```
