@@ -118,3 +118,52 @@ const btnClasses = classNames({
 
 return <button className={btnClass}>click me</button>;
 ```
+
+## Add gsap animations
+
+Useful link to get started [here](https://greensock.com/react/). Keep in mind that page is not updated to hooks yet, so just learn the broad concepts from it.
+
+```tsx
+import { TweenMax, Power3 } from 'gsap';
+import { useRef, useEffect, useState } from 'react';
+
+const Component = () => {
+  let circleRef = useRef<HTMLDivElement>(null);
+  const [isBig, setIsBig] = useState(false);
+
+  useEffect(() => {
+    // do animations on component mount
+  }, [circleRef]);
+
+  function handleClick() {
+    if (isBig) {
+      handleExpand();
+    } else {
+      handleShrink();
+    }
+    setBig((current) => !current);
+  }
+
+  function handleExpand() {
+    TweenMax.to(circleRef.current, {
+      width: 200,
+      height: 200,
+      ease: Power3.easeOut
+    });
+  }
+
+  function handleShrink() {
+    TweenMax.to(circleRef.current, {
+      width: 80,
+      height: 80,
+      ease: Power3.easeOut
+    });
+  }
+
+  return (
+    <div ref={circleRef} onClick={handleClick}>
+      circle
+    </div>
+  );
+};
+```
