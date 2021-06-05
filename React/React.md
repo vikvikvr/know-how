@@ -64,6 +64,8 @@ http://reactcommunity.org/react-transition-group/with-react-router/
 You can turn any .svg file to a React component very easily
 
 ```jsx
+// in the icon component
+
 import React from 'react';
 import { ReactComponent as Logo } from './logo.svg';
 
@@ -71,6 +73,26 @@ const Icon = () => {
   return (
     <div className="icon-container">
       <Logo />
+    </div>
+  );
+};
+
+// in a component that receives the icon as a prop
+
+import React, { FunctionComponent, SVGProps } from 'react';
+
+type ReactSVG = FunctionComponent<
+  SVGProps<SVGSVGElement> & { title?: string | undefined }
+>;
+
+interface Props {
+  Icon: ReactSVG;
+}
+
+const UsesIcon = ({ Icon }: props) => {
+  return (
+    <div>
+      <Icon />
     </div>
   );
 };
@@ -166,4 +188,49 @@ const Component = () => {
     </div>
   );
 };
+```
+
+## Absolute imports
+
+When your imports start looking a lot like `../../` you can add your root directory to the "default paths".
+
+Make sure your `tsconfig.json` has these entries
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
+```
+
+The result will be very nice
+
+```js
+// before
+import Image from './../../components/image';
+
+// after
+import Image from 'components/image';
+```
+
+## Using local images
+
+You can use any local image instead of loading them from the web, to save bandwidth.
+
+```js
+import pictureSrc from 'assets/images/avatarPlaceholder.png';
+
+return <img src={pictureSrc} alt="avatar" />;
+```
+
+Also in CSS/SCSS
+
+```scss
+// assuming the file is inside src/assets/images
+
+.container {
+  background-image: url('/assets/images/foo.png');
+}
 ```
