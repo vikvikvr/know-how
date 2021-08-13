@@ -234,3 +234,9 @@ Also in CSS/SCSS
   background-image: url('/assets/images/foo.png');
 }
 ```
+
+## use refs with SVG elements
+
+```ts
+const svg = useRef < SVGSVGElement > null;
+```
